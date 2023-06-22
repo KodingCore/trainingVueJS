@@ -30,8 +30,17 @@ export default {
         },
         addAtList(event)
         {
-            let newTask = event.target.elements.addInput.value; 
+            let newTask = event.target.elements.addInput.value;
             this.allLi.push(newTask);
+            
+        },
+        handleCheckboxClick(event)
+        {
+            if(event.target.checked){
+                event.target.parentNode.style.textDecoration = "line-through";
+            }else{
+                event.target.parentNode.style.textDecoration = "none";
+            }
         }
     }  
 }

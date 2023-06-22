@@ -36,7 +36,10 @@
             <h2>ToDoList</h2>
             <ul>
                 <template v-for="newTask in allLi">
-                    <li>{{newTask}}</li>
+                    <li>
+                        <input type="checkbox" name="inputCheck" id="inputCheck" @click.stop="handleCheckboxClick">
+                        {{newTask}}
+                    </li>
                 </template> 
             </ul>
             <form @submit.prevent="addAtList">  
