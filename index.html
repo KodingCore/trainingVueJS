@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/styles/css/style.css">
+</head>
+<body>
+    <header>
+
+    </header>
+    <main>
+        <section id="app">
+            <p>{{ number }}</p>
+	        <button @click="addOne">Augmenter de 1</button>
+            <button @click="rmvOne">Diminuer de 1</button>
+            <button @click="double">Doubler</button>
+        </section>
+        <section id="app2">
+            <h1 v-if="animal === 'Dogs'">Dogs</h1>
+	        <h1 v-else-if="animal === 'Cats'">Cats</h1>
+	        <h1 v-else>Not Dogs or Cats</h1>
+            <button @click="dogs">Dogs</button>
+            <button @click="cats">Cats</button>
+        </section>
+        <section>
+            <ul id="app3">
+                <template v-for="nbr in numbers">
+                    <li v-if="nbr % 2 === 0" class="pair">{{nbr}}</li>
+                    <li v-else class="impair">{{nbr}}</li>
+                </template>
+            </ul>
+        </section>
+        <section>
+            <h2>ToDoList</h2>
+            <ul id="app4">
+                <template v-for="oneLi in allLi">
+                    <li>{{oneLi}}</li>
+                </template> 
+            </ul>
+            <form action="#">
+                <fieldset>
+                    <label for="addAtList">AddAtList</label>
+                    <input type="text" name="addAtList" id="addAtList">
+                </fieldset>
+                <button @click="addList">ADD</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+    
+</body>
+<script type="module" src="assets/js/index.js"></script>
+</html>

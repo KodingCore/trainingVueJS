@@ -1,0 +1,18 @@
+section {
+  border-bottom: solid;
+}
+section button {
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.impair {
+  color: blue;
+}
+
+.pair {
+  color: red;
+}/*# sourceMappingURL=style.css.map */
