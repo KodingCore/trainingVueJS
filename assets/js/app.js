@@ -28,11 +28,10 @@ export default {
         {
             this.animal = "Cats";
         },
-        addList()
+        addAtList(event)
         {
-            const tachesup = document.getElementById("addAtList");
-            allLi.push(tachesup.value);
-            console.log(tachesup.value);
+            let newTask = event.target.elements.addInput.value; 
+            this.allLi.push(newTask);
         }
     }  
 }

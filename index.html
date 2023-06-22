@@ -32,19 +32,20 @@
                 </template>
             </ul>
         </section>
-        <section>
+        <section id="app4">
             <h2>ToDoList</h2>
-            <ul id="app4">
-                <template v-for="oneLi in allLi">
-                    <li>{{oneLi}}</li>
+            <ul>
+                <template v-for="newTask in allLi">
+                    <li>{{newTask}}</li>
                 </template> 
             </ul>
-            <form action="#">
+            <form @submit.prevent="addAtList">  
                 <fieldset>
-                    <label for="addAtList">AddAtList</label>
-                    <input type="text" name="addAtList" id="addAtList">
+                    <label for="addInput">AddAtList</label>
+                    <input type="text" name="addInput" id="addInput">
+                    <button type="submit">ADD</button>
                 </fieldset>
-                <button @click="addList">ADD</button>
+                
             </form>
         </section>
     </main>
